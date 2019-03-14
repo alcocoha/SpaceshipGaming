@@ -1,3 +1,4 @@
+
 ## Technical Test - Technogi
 
 Test created with react
@@ -5,6 +6,10 @@ Test created with react
 ## Instructions:
 
 Download project from github: https://github.com/alcocoha/SpaceshipGaming
+
+## URL: Preprod
+
+http://jorgehurtado.me/SpaceshipGaming/
 
 ### `npm install`
 

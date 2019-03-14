@@ -2,6 +2,7 @@
   "name": "spaceship-gaming",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jorgehurtado.me/SpaceshipGaming",
   "dependencies": {
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
