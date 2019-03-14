@@ -23,10 +23,6 @@ Runs the app in the development mode.
 
 Builds the app for production to the `build` folder.
 
-## Optional:
-
-Run the build folder that is sent by email
-
 ## Create by:
 
 Jorge Alberto Hurtado Ortega
