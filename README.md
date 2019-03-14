@@ -4,7 +4,7 @@ Test created with react
 
 ## Instructions:
 
-Download project from github: [https://github.com/alcocoha/SpaceshipGaming] (https://github.com/alcocoha/SpaceshipGaming)
+Download project from github: https://github.com/alcocoha/SpaceshipGaming
 
 ### `npm install`
 
