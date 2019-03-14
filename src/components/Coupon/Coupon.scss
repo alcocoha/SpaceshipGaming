@@ -1,0 +1,132 @@
+@import '../../assets/sass/variables';
+@import '../../assets/sass/mixins';
+
+.cupon{
+    width: 257px;
+    height: 106px;
+    background-color: $background-coupon;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: $shadow-coupon;
+    -moz-box-shadow: $shadow-coupon;
+    box-shadow: $shadow-coupon;
+
+    @include respond-to(small){
+        width: 334px;
+        height: 203px;
+    }
+
+    .content-cupon{
+        // background-color: aqua;
+        width: calc(100% - 74px);
+        padding: 20px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 29px;
+        
+        .content-title{
+            // background-color: cadetblue;
+            height: 111px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p{
+                text-align: center;
+                font-size: 16px;
+                font-family: 'TodaySHOP-Bold', sans-serif;
+                text-transform: uppercase;
+                line-height: 1.2;
+            }
+            @include respond-to(small){
+                p{
+                    font-size: 25px;
+                    line-height: inherit;
+                }
+            }
+        }
+
+        .content-extra-text{
+            font-family: 'TodaySHOP-Bold', sans-serif;
+            font-size: 18px;
+            height: 78px;
+            @include respond-to(small){
+                font-size: 25px;
+                height: 78px;
+            }
+        }
+
+        .content-button{
+
+            %button {
+                color: white;
+                border: 0;
+                border-radius: 3px;
+                font-family: 'TodaySHOP-Bold', sans-serif;
+                text-transform: uppercase;
+                font-size: 14px;
+                width: 145px;
+                height: 28px;
+	            padding-top: 1px;
+
+                @include respond-to(small){
+                    width: 188px;
+                    height: 38px;
+                    font-size: 19px;
+	                padding-top: 6px;
+                }
+            }
+            .bonus{
+                @extend %button;
+                @include buttons-gradient(#ac0c75, #FF6BCA, #FF78CF, #FF00A8);
+            }
+            
+            .offer{
+                @extend %button;
+                @include buttons-gradient(#1C4F06, #86BA2B, #2A740D);
+            }
+    
+        }
+        
+    }
+
+    %content-icon{
+        width: 57px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 32px;
+        }
+        @include respond-to(small){
+            width: 74px;
+            img{
+                width: 42px;
+            }
+        }
+    }
+
+    .bonus-icon{ 
+        @extend %content-icon;
+        background-color: $bonus-icon;
+    }
+    .offer-icon{
+        @extend %content-icon;
+        background-color: $offer-icon;
+    }
+    .block-icon{ 
+        @extend %content-icon;
+        background-color: $block-icon;
+    }
+
+}
+
+.blocked{
+    opacity: 0.5;
+}

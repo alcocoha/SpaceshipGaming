@@ -1,0 +1,43 @@
+@import '../../assets/sass/variables';
+@import '../../assets/sass/mixins';
+
+.container{
+    .row{
+        %containers-coupons{
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            &:nth-child(2n) {
+                justify-content: center;
+            }
+            @include respond-to(small){
+                padding: 25px;
+                justify-content: flex-end;
+                &:nth-child(2n) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+        .coupon-bonus{
+            @extend %containers-coupons;            
+        }
+        .coupon-offer{
+            @extend %containers-coupons;
+        }
+    }
+    .title-row{
+        font-family: 'TodaySHOP-Bold', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        text-shadow: 1px 1px black;
+        margin-top: 10px;
+        padding: 0;
+        @include respond-to(small){
+            font-size: 24px;
+            margin-top: 50px;
+        }
+    }
+}
+

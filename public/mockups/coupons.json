@@ -1,0 +1,41 @@
+{
+    "bonus" : [
+        {   
+            "bonus_id" : "3712209451",
+            "title": "£10 free bingo bonus to use now",
+            "extra_text": "",
+            "button_text": "Play Bingo",
+            "blocked": false
+        },
+        {
+            "bonus_id" : "4549359093",
+            "title": "50 free spins on gemix to use now",
+            "extra_text": "",
+            "button_text": "Play Slots",
+            "blocked": false
+        }
+    ],
+    "offer" : [
+        {
+            "offer_id" : "4173744022",
+            "title": "1st deposit offer 300% bingo bonus +100 free spins",
+            "extra_text": "",
+            "button_text": "Deposit to claim",
+            "blocked": false
+        },
+        {
+            "offer_id" : "3315688856",
+            "title": "1st deposit offer 100% slots bonus",
+            "extra_text": "",
+            "button_text": "Deposit to claim",
+            "blocked": false
+        },
+        {
+            "offer_id" : "4824638197",
+            "title": "2nd deposit bonus",
+            "extra_text": "150% bingo bonus",
+            "button_text": "",
+            "blocked": true
+        }
+    ]
+}

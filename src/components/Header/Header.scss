@@ -1,0 +1,65 @@
+@import '../../assets/sass/variables';
+
+.header{
+    .navbar{
+        background-color: $background-header;
+        font-family: 'TodaySHOP-Bold', sans-serif;
+        .row{
+            flex: 1;
+
+            .title{
+                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: 'TodaySHOP-Medium', sans-serif;
+                color: $main-color;
+            }
+            
+            .close-container{
+                position: relative;
+                width: 30px;
+                height: 27px;
+                cursor: pointer;
+
+                .leftright{
+                    height: 2px;
+                    width: 30px;
+                    position: absolute;
+                    margin-top: 12px;
+                    background-color: $main-color;
+                    border-radius: 2px;
+                    transform: rotate(45deg);
+                    transition: all .3s ease-in;
+                }
+
+                .rightleft{
+                    height: 2px;
+                    width: 30px;
+                    position: absolute;
+                    margin-top: 12px;
+                    background-color: $main-color;
+                    border-radius: 2px;
+                    transform: rotate(-45deg);
+                    transition: all .3s ease-in;
+                }
+
+                &:hover{
+                    .leftright{
+                        transform: rotate(-45deg);
+                        background-color: $red;
+                    }
+                    .rightleft{
+                        transform: rotate(45deg);
+                        background-color: $red;
+                    }
+                }
+            }
+            .btn-close{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

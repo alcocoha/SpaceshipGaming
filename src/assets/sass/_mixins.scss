@@ -1,0 +1,64 @@
+// Gradient for buttons
+@mixin buttons-gradient($shadow, $colorOne, $colorTwo, $colorThree:null) {
+	@if not ($colorThree) {    
+		background: $colorOne;
+		background: -moz-linear-gradient(top, $colorOne 0%, $colorTwo 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, $colorOne), color-stop(100%, $colorTwo));
+		background: -webkit-linear-gradient(top, $colorOne 0%, $colorTwo 100%);
+		background: -o-linear-gradient(top, $colorOne 0%, $colorTwo 100%);
+		background: -ms-linear-gradient(top, $colorOne 0%, $colorTwo 100%);
+		background: linear-gradient(to bottom, $colorOne 0%, $colorTwo 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorOne', endColorstr='$colorTwo', GradientType=0 );
+	} @else {
+		background: $colorOne;
+		background: -moz-linear-gradient(top, $colorOne 0%, $colorTwo 29%, $colorThree 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, $colorOne), color-stop(29%, $colorTwo), color-stop(100%, $colorThree));
+		background: -webkit-linear-gradient(top, $colorOne 0%, $colorTwo 29%, $colorThree 100%);
+		background: -o-linear-gradient(top, $colorOne 0%, $colorTwo 29%, $colorThree 100%);
+		background: -ms-linear-gradient(top, $colorOne 0%, $colorTwo 29%, $colorThree 100%);
+		background: linear-gradient(to bottom, $colorOne 0%, $colorTwo 29%, $colorThree 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorOne', endColorstr='$colorThree', GradientType=0 );
+	}
+	
+	-webkit-box-shadow: 0px 1px 0px 1px $shadow;
+	-moz-box-shadow: 0px 1px 0px 1px $shadow;
+	box-shadow: 0px 1px 0px 1px $shadow;
+	text-transform: uppercase;
+	cursor: pointer;
+	
+	&:hover {
+		@if not ($colorThree) {    
+			background: $colorTwo;
+			background: -moz-linear-gradient(top, $colorTwo 0%, $colorOne 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, $colorTwo), color-stop(100%, $colorOne));
+			background: -webkit-linear-gradient(top, $colorTwo 0%, $colorOne 100%);
+			background: -o-linear-gradient(top, $colorTwo 0%, $colorOne 100%);
+			background: -ms-linear-gradient(top, $colorTwo 0%, $colorOne 100%);
+			background: linear-gradient(to bottom, $colorTwo 0%, $colorOne 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorTwo', endColorstr='$colorOne', GradientType=0 );
+		} @else {
+			background: $colorThree;
+			background: -moz-linear-gradient(top, $colorThree 0%, $colorOne 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, $colorThree), color-stop(100%, $colorOne));
+			background: -webkit-linear-gradient(top, $colorThree 0%, $colorOne 100%);
+			background: -o-linear-gradient(top, $colorThree 0%, $colorOne 100%);
+			background: -ms-linear-gradient(top, $colorThree 0%, $colorOne 100%);
+			background: linear-gradient(to bottom, $colorThree 0%, $colorOne 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorThree', endColorstr='$colorOne', GradientType=0 );
+		}
+	}
+  
+}
+
+// Media Queries
+@mixin respond-to($media) {
+	@if $media == small {
+		@media (min-width: $break-small) { @content; }
+	}
+	@else if $media == medium {
+		@media (min-width: $break-medium) { @content; }
+	}
+	@else if $media == large {
+		@media (min-width: $break-large) { @content; }
+	}
+}
