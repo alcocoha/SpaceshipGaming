@@ -11,6 +11,10 @@ Download project from github: https://github.com/alcocoha/SpaceshipGaming
 
 http://jorgehurtado.me/SpaceshipGaming/
 
+## Files SASS:
+
+Within each component and in the assets folder
+
 ### `npm install`
 
 Install all the necessary dependencies to code the project
