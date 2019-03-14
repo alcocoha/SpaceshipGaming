@@ -13,7 +13,11 @@ http://jorgehurtado.me/SpaceshipGaming/
 
 ## Files SASS:
 
-Within each component and in the assets folder
+Within each component and in the assets directory
+
+## Files JSON:
+
+In the public folder in the Mockups directory
 
 ### `npm install`
 
